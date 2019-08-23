@@ -82,7 +82,7 @@ git rebase [-i]  <提交起点> [<提交终点>]
 
 **示例**
 ```bash
-#当前节点iss001 v1.0->fix iss001->fix iss001->fix iss001 again->fix iss001 again and again!
+#当前节点iss001 v1.0->fix iss001->fix iss001 again->fix iss001 again and again!
 #(这个逼居然提交了这么多次) :P (太丢人了)
 #git log 查看v1.0的HashID
 git rebase -i <v1.0的hashID>
@@ -96,6 +96,7 @@ pick 326f8ca fix iss001
 s a492df3 fix iss001 again
 s 199882e fix iss001 again and again
 #保存,关闭.
+#可能需要解决冲突
 
 #自动打开注释文件.
 #修改,关闭,保存.
@@ -138,8 +139,8 @@ git log
 异:节点历史不同,rebase是一条直线,merge存在分支.
 异:rebase可以用于整合历史节点.
 
-**Rebase语句比Merge复杂,但是节点历史更加的简单命令(一根葱>分支树)**
-**Rebase可以完成整合历史节点登功能**
+**Rebase语句比Merge复杂,但是节点历史更加的简单明了(一根葱>分支树)**
+**Rebase可以完成整合历史节点等功能**
 
 
 **感谢@jartto和@git-scm**
